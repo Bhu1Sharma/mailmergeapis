@@ -41,7 +41,6 @@ public class ApachePoiJodConverter implements Converter {
         public static DocumentConverter getInstance() throws OfficeException {
             if (instance == null) {
                 OfficeManager LIBRE_OFFICE = LocalOfficeManager.builder().officeHome("E:\\pf\\LibreOffice").install().build();
-//                OfficeManager OPEN_OFFICE = LocalOfficeManager.builder().officeHome("E:\\pf\\OpenOffice4").install().build();
                 LIBRE_OFFICE.start();
                 instance = LocalConverter.make(LIBRE_OFFICE);
             }
